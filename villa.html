@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta property="og:title" content="가치경매 빌라 임장 점수표">
+<meta property="og:description" content="빌라 임장 현장에서 1~5점만 누르면 몇 점짜리 물건인지 바로 나와요">
+<title>가치경매 빌라 임장 점수표</title>
+<meta name="theme-color" content="#16233F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: 가치경매 계산기와 같은 톤 — 네이비 브랜드 헤더 → 질문 카드 → 물건 정보 → 시세(선택) → 카테고리별 1~5 버튼 → 특이사항 → 결과 카드(네이비 푸터), 하단 네이비 점수바 */
+:root{
+  --navy:#16233F; --navy-2:#223256; --navy-text:#C7CEDE; --orange:#E8742C; --orange-soft:#FBE4D3; --gold:#F5C66B;
+  --cream:#F7F4EE; --line:#E4E0D6; --ink:#20242C; --muted:#767066; --card:#FFFFFF; --field:#FBFAF7; --sand:#ECE7DD;
+  --good:#2F8A57; --bad:#D4433A;
+  --font:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',-apple-system,BlinkMacSystemFont,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+body{background:var(--cream);color:var(--ink);font-family:var(--font);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:20px 120px}
+.wrap{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+h1,h2,h3{margin:0;text-wrap:balance}
+button,input,textarea{font-family:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+
+/* 브랜드 헤더 */
+header.top{background:var(--navy);color:#fff;border-radius:16px;padding:24px 22px 18px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:6px}
+header.top::after{content:"";position:absolute;right:-50px;top:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(232,116,44,.38),transparent 70%);pointer-events:none}
+header.top>*{position:relative;z-index:1}
+header.top h1{font-size:24px;letter-spacing:-.4px;font-weight:800}
+header.top p{margin:0;color:var(--navy-text);font-size:13.5px}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.legend span{font-size:12px;font-weight:700;color:var(--navy-text);background:rgba(255,255,255,.08);border-radius:999px;padding:3px 10px}
+.legend b{color:var(--gold)}
+.badge{display:inline-flex;align-items:center;gap:9px;align-self:flex-end;margin-top:8px;background:rgba(255,255,255,.12);padding:7px 15px 7px 9px;border-radius:22px}
+.badge img,.mk img{width:32px;height:23px;object-fit:contain;display:block}
+.badge span{font-size:15px;font-weight:800;color:#F2F5FA;white-space:nowrap}
+
+/* 카드 */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px;display:flex;flex-direction:column;gap:14px}
+.card-h{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.card-t{font-size:16px;font-weight:800;display:flex;align-items:center;gap:8px}
+.card-t::before{content:"";width:4px;height:15px;border-radius:2px;background:var(--orange);flex:none}
+.card-h .pct{font-size:12.5px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.card-note{margin:-6px 0 0;font-size:12.5px;color:var(--muted)}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.info .full{grid-column:1/-1}
+label.f{display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:var(--muted);font-weight:700;min-width:0}
+input[type=text],input[type=date],textarea{font-size:15px;font-weight:600;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:11px;padding:11px 13px;width:100%;outline:none}
+input:focus,textarea:focus{border-color:var(--orange);background:#fff}
+textarea{min-height:76px;resize:vertical;font-weight:500}
+.ghost{background:transparent;border:1px dashed #BDB5A6;border-radius:10px;padding:7px 13px;font-size:13px;font-weight:700;color:var(--muted);align-self:flex-start}
+.tag{font-size:11px;font-weight:800;color:#9A4A17;background:var(--orange-soft);border-radius:6px;padding:2px 7px;white-space:nowrap}
+
+/* 접는 카드 */
+.fold{padding:0}
+.fold>summary{list-style:none;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px;cursor:pointer}
+.fold>summary::-webkit-details-marker{display:none}
+.fold>summary .sub{font-size:12px;color:var(--muted);font-weight:600;display:block;margin-top:2px;padding-left:12px}
+.fold>summary .arw{font-size:12.5px;font-weight:800;color:var(--navy-2);background:#F1EDE5;border-radius:8px;padding:5px 10px;white-space:nowrap}
+.fold[open]>summary .arw::after{content:"접기"}
+.fold:not([open])>summary .arw::after{content:"펼치기"}
+.fold-body{padding:0 18px 20px;display:flex;flex-direction:column;gap:12px;font-size:14px}
+.script h3{font-size:13px;color:var(--muted);font-weight:800}
+.script ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.script li q{font-weight:700;quotes:"“" "”"}
+.script li span{display:block;font-size:12px;color:var(--orange);font-weight:700}
+.tip{background:var(--field);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--muted);margin:0}
+.tip b{color:var(--ink)}
+.comps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.calc{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;background:var(--orange-soft);border-radius:12px;padding:11px 12px;font-size:13.5px;color:#9A4A17;font-weight:700}
+.calc b{color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
+.calc .mini{font-size:12px;border:0;background:var(--navy);color:#fff;border-radius:8px;padding:6px 10px;font-weight:800}
+.err{font-size:12px;color:var(--bad)}
+
+/* 항목 */
+.item{display:flex;flex-direction:column;gap:8px;padding-top:16px;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:0;padding-top:0}
+.q{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15.5px;flex-wrap:wrap}
+.item details{font-size:13px;color:var(--muted)}
+.item summary{cursor:pointer;width:max-content;max-width:100%;font-weight:700;color:var(--navy-2)}
+.item details p{margin:6px 0 0;background:var(--field);border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+.item details p q{color:var(--ink);font-weight:700}
+.opts{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;background:#F1EDE5;border-radius:12px;padding:4px}
+.opt{background:transparent;border:0;border-radius:9px;padding:8px 2px 7px;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;transition:background .15s,color .15s}
+.opt .n{font-size:20px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+.opt .s{font-size:11px;font-weight:700;color:var(--muted);line-height:1.25;text-align:center;word-break:keep-all;overflow-wrap:anywhere}
+.opt[aria-pressed="true"]{background:var(--navy);color:#fff;box-shadow:0 2px 6px rgba(22,35,63,.25)}
+.opt[aria-pressed="true"] .s{color:var(--navy-text)}
+.picked{font-size:13px;min-height:1.4em;color:var(--muted)}
+.picked b{color:var(--orange)}
+
+.chk{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--field);font-weight:700;font-size:14px}
+.chk input{width:18px;height:18px;margin-top:2px;accent-color:var(--navy);flex:none}
+.chk.on{border-color:var(--orange);background:var(--orange-soft)}
+.chk small{display:block;color:var(--muted);font-size:12px;font-weight:500}
+
+/* 결과 카드 */
+.result{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 20px 0;box-shadow:0 8px 30px rgba(22,35,63,.08);overflow:hidden;display:flex;flex-direction:column;gap:14px}
+.rc-label{font-size:13px;font-weight:800;color:var(--muted)}
+.score-row{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.hero{display:flex;align-items:baseline;gap:6px;color:var(--orange)}
+.hero .v{font-size:60px;font-weight:800;letter-spacing:-2px;line-height:1;font-variant-numeric:tabular-nums}
+.hero .u{font-size:20px;font-weight:800;color:var(--muted)}
+.grade{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.chip{font-size:24px;font-weight:800;min-width:52px;text-align:center;padding:6px 14px;border-radius:12px;color:#fff;background:var(--muted)}
+.grade .lbl{font-weight:800;font-size:15px}
+.msg{margin:0;font-size:14.5px}
+.warn{margin:0;font-size:13.5px;color:var(--bad);font-weight:700}
+.bars{display:flex;flex-direction:column;gap:8px;padding-top:14px;border-top:1px solid var(--line)}
+.bar{display:grid;grid-template-columns:76px 1fr 34px;align-items:center;gap:10px;font-size:13px;font-weight:700}
+.bar .t{height:10px;background:#F1EDE5;border-radius:6px;overflow:hidden}
+.bar .t i{display:block;height:100%;background:var(--navy);width:0;transition:width .25s;border-radius:6px}
+.bar .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.weak{font-size:13.5px;background:var(--field);border-radius:12px;padding:12px 14px}
+.weak b{display:block;margin-bottom:4px;font-weight:800}
+.weak ul{margin:0 0 8px;padding-left:18px;color:var(--muted)}
+.weak ul:last-child{margin-bottom:0}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+.btn{border-radius:11px;padding:12px 16px;font-weight:800;font-size:14px;border:0;background:#F1EDE5;color:var(--muted)}
+.btn.primary{background:var(--navy);color:#fff;flex:1 1 200px}
+.btn.danger{color:var(--bad)}
+.rule{font-size:11.5px;color:var(--muted);text-align:center;margin:0}
+.rc-foot{margin:4px -20px 0;background:var(--navy);padding:11px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.rc-foot .what{font-size:12px;font-weight:700;color:var(--navy-text)}
+.mk{display:flex;align-items:center;gap:8px}
+.mk img{width:30px;height:21px}
+.mk span{font-size:14px;font-weight:800;color:#F2F5FA;white-space:nowrap}
+.foot{text-align:center;font-size:11.5px;color:#9C958A;margin-top:8px}
+
+/* 하단 점수바 */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--navy);color:#fff;box-shadow:0 -4px 16px rgba(0,0,0,.15);
+  padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.dock-in{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.dock .sc{font-size:28px;font-weight:800;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums;min-width:52px;letter-spacing:-1px}
+.dock .meta{flex:1;min-width:0;font-size:11.5px;color:var(--navy-text);font-weight:700}
+.dock .meta b{display:block;font-size:14px;color:#fff}
+.prog{height:4px;background:rgba(255,255,255,.15);border-radius:4px;margin-top:4px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--orange);transition:width .2s}
+.dock .go{border:0;background:var(--orange);color:#fff;border-radius:10px;padding:10px 14px;font-weight:800;font-size:14px}
+
+/* 이미지 미리보기 */
+.modal{position:fixed;inset:0;z-index:20;background:rgba(15,26,49,.72);display:flex;align-items:center;justify-content:center;
+  padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.sheet{background:#fff;border-radius:18px;max-width:460px;width:100%;max-height:100%;display:flex;flex-direction:column;gap:10px;padding:16px;overflow:auto}
+.sheet .btn{flex:none}
+.sheet img{width:100%;border-radius:12px;border:1px solid var(--line)}
+.sheet p{margin:0;font-size:12.5px;color:var(--muted);text-align:center}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:13.5px;font-weight:700;max-width:calc(100% - 32px)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:420px){header.top h1{font-size:22px}.hero .v{font-size:52px}.opt .s{font-size:10px}.comps{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>빌라 임장 점수표</h1>
+    <p>현장에서 항목마다 1~5점을 눌러주세요. 점수는 자동으로 계산돼요.</p>
+    <div class="legend"><span><b>5점</b> 아주 좋음</span><span><b>3점</b> 보통</span><span><b>1점</b> 나쁨</span><span><b>★중요</b> 점수 2배</span></div>
+    <div class="badge"><img class="logo" alt="가치경매 로고"><span>made by 가치경매</span></div>
+  </header>
+
+  <details class="card fold script" id="scriptCard">
+    <summary><span><span class="card-t">현장 질문 카드</span><span class="sub">부동산·관리인에게 이대로 물어보세요</span></span><span class="arw"></span></summary>
+    <div class="fold-body">
+      <p class="tip"><b>부동산에 들어가기 전에.</b> "경매 물건 보러 왔어요"라고 솔직히 말해도 괜찮아요. "낙찰받으면 매도나 전세는 여기 맡길게요"라고 하면 훨씬 잘 알려줘요.</p>
+      <h3>부동산 중개사무소에서</h3>
+      <ol>
+        <li><q>이 근처 비슷한 빌라 요즘 매매 얼마 정도 해요?</q><span>→ 시세 · 예상 매도가</span></li>
+        <li><q>요즘 빌라 찾는 손님 좀 있어요? 거래는 잘 돼요?</q><span>→ 주변 실거래</span></li>
+        <li><q>전세(월세) 내놓으면 얼마에, 얼마나 빨리 나가요?</q><span>→ 전월세 수요</span></li>
+        <li><q>방 3개짜리랑 2개짜리 중에 뭐가 더 잘 나가요?</q><span>→ 방 개수·구조</span></li>
+        <li><q>이 동네에서 사람들이 피하는 골목이나 건물 있어요?</q><span>→ 동네 분위기</span></li>
+      </ol>
+      <h3>관리인·이웃에게</h3>
+      <ol>
+        <li><q>한 달 관리비 얼마예요? 밀린 집 있어요?</q><span>→ 관리비 체납</span></li>
+        <li><q>그 호수 지금 누가 살고 있어요?</q><span>→ 점유자 상황</span></li>
+        <li><q>비 오면 물 새거나 고인 적 있어요?</q><span>→ 누수·침수</span></li>
+      </ol>
+    </div>
+  </details>
+
+  <section class="card" aria-label="물건 정보">
+    <div class="card-h"><span class="card-t">물건 정보</span><button class="ghost" id="sample" type="button">예시로 채워보기</button></div>
+    <div class="info">
+      <label class="f full">물건명 / 사건번호<input type="text" id="name" placeholder="예) 2026타경12345 · OO빌라 302호"></label>
+      <label class="f full">주소<input type="text" id="addr" placeholder="예) 서울 마포구 망원동 000-00"></label>
+      <label class="f">임장일<input type="date" id="date"></label>
+      <label class="f">예상 매도가<input type="text" id="bid" placeholder="예) 2억 2천"></label>
+    </div>
+  </section>
+
+  <details class="card fold" id="priceCard">
+    <summary><span><span class="card-t">시세 계산 <span class="tag">선택적 입력</span></span><span class="sub">안 써도 점수는 나와요</span></span><span class="arw"></span></summary>
+    <div class="fold-body">
+      <label class="f">비슷한 빌라 실거래가 (최대 3건)
+        <div class="comps">
+          <input type="text" id="c0" placeholder="예) 2억 1천" aria-label="실거래가 1">
+          <input type="text" id="c1" placeholder="예) 2억 3천" aria-label="실거래가 2">
+          <input type="text" id="c2" placeholder="예) 2억" aria-label="실거래가 3">
+        </div>
+      </label>
+      <label class="f">전세 시세 (부동산에서 들은 금액)<input type="text" id="jeonse" placeholder="예) 1억 7천"></label>
+      <div class="calc" id="calc"></div>
+      <p class="tip">층·연식·방 개수가 비슷한 집으로 고르세요. 금액은 <b>2억 1천</b>, <b>21000</b>(만원)처럼 편하게 쓰면 돼요.</p>
+    </div>
+  </details>
+
+  <div id="cats" class="wrap"></div>
+
+  <section class="card" aria-label="특이사항">
+    <div class="card-h"><span class="card-t">특이사항</span></div>
+    <p class="card-note">점수에는 안 들어가요. 해당되는 것만 체크하면 결과에 같이 표시돼요.</p>
+    <div id="reds" style="display:flex;flex-direction:column;gap:8px"></div>
+    <label class="f">기타 (직접 쓰기)<textarea id="memo" placeholder="예) 1층 상가 소음 있음. 역까지 오르막. 옥상에 창고 같은 구조물 있음."></textarea></label>
+  </section>
+
+  <section class="result" id="result" aria-label="결과">
+    <div class="card-h"><span class="rc-label">최종 결과</span><span class="pct" id="rProg" style="font-size:12px;font-weight:700;color:var(--muted)"></span></div>
+    <div class="score-row">
+      <div class="hero"><span class="v" id="rScore">0</span><span class="u">/ 100점</span></div>
+      <div class="grade"><span class="chip" id="rChip">-</span><span class="lbl" id="rLbl">체크 전</span></div>
+    </div>
+    <p class="msg" id="rMsg">항목을 체크하면 이 물건이 몇 점짜리인지 바로 보여드려요.</p>
+    <p class="warn" id="rWarn" hidden></p>
+    <div class="bars" id="rBars"></div>
+    <div class="weak" id="rWeak" hidden></div>
+    <div class="actions">
+      <button class="btn primary" id="saveImg" type="button">결과 사진으로 저장</button>
+      <button class="btn danger" id="reset" type="button">새 물건 시작</button>
+    </div>
+    <p class="rule">A 80점↑ 적극 검토 · B 65~79 조건부 · C 50~64 신중 · D 50 미만 패스</p>
+    <div class="rc-foot"><span class="what">빌라 임장 점수표</span><span class="mk"><img class="logo" alt="가치경매 로고"><span>made by 가치경매</span></span></div>
+  </section>
+  <div class="foot">참고용 점수예요. 최종 판단은 권리분석과 함께 해주세요.</div>
+</div>
+
+<div class="dock">
+  <div class="dock-in">
+    <span class="sc" id="dScore">0</span>
+    <div class="meta"><b id="dLbl">체크 전</b><span id="dProg"></span><div class="prog"><i id="dBar"></i></div></div>
+    <button class="go" id="goResult" type="button">결과 보기</button>
+  </div>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="sheet" role="dialog" aria-label="결과 이미지">
+    <img id="preview" alt="임장 결과 이미지">
+    <button class="btn primary" id="doSave" type="button">사진 저장하기</button>
+    <p id="saveHint">저장 버튼이 안 되면 이미지를 길게 눌러 저장하세요.</p>
+    <button class="btn" id="closeModal" type="button">닫기</button>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const LOGO="data:image/png;base64,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";
+const CATS=[
+ {id:'price',name:'거래·수요',note:'제일 중요해요. 빌라는 "나중에 팔 수 있느냐"가 핵심이에요.',items:[
+  {id:'deal',q:'주변 실거래 건수 (최근 6개월)',star:true,how:'실거래가 앱(국토부 실거래가·밸류맵·디스코)을 열고 물건 주변 빌라가 최근 6개월 동안 몇 건 거래됐는지 세어보세요. 부동산에는 <q>요즘 빌라 거래 잘 돼요?</q>라고 물어보세요.',
+   o:[['10건','30건이 안 돼요. 거래가 드물어서 되팔 때 고생할 수 있어요.'],['30건','30건 이상이에요. 거래가 조금 있어요.'],['50건','50건 이상이에요. 보통이에요.'],['70건','70건 이상이에요. 거래가 꾸준해요.'],['100건↑','100건 이상이에요. 거래가 활발해서 되팔기 쉬워요.']]},
+  {id:'rent',q:'전월세 수요',how:'부동산 2~3곳에 <q>전세(월세) 내놓으면 얼마에, 얼마나 빨리 나가요?</q>라고 물어보세요.',
+   o:[['안 나감','세입자 구하기가 매우 어려워요.'],['잘 안 나감','오래 걸려요.'],['보통','평범하게 나가요.'],['잘 나감','금방 나가요.'],['바로 계약','내놓으면 바로 계약돼요.']]}
+ ]},
+ {id:'loc',name:'입지',note:'역, 생활편의, 동네 분위기를 봐요.',items:[
+  {id:'station',q:'지하철역 거리',how:'역에서 물건까지 직접 걸어보세요. 오르막이 있으면 한 단계 낮게 주세요.',
+   o:[['버스 환승','역까지 버스를 타야 해요.'],['20분↑','걸어서 20분 이상이에요.'],['15분','걸어서 15분 정도예요.'],['10분','걸어서 10분 정도예요.'],['5분 내','역세권이에요.']]},
+  {id:'life',q:'생활 편의시설',how:'걸어오면서 마트·편의점·병원·약국·버스정류장이 있는지 봐요.',
+   o:[['차 필요','차가 있어야 생활돼요.'],['부족','몇 가지가 멀어요.'],['보통','기본은 갖춰져 있어요.'],['편리','대부분 가까워요.'],['다 있음','걸어서 5분 안에 다 있어요.']]},
+  {id:'area',q:'동네 분위기',how:'골목 밝기, 경사, 유흥업소·공장·고물상 같은 시설을 봐요. 밤에 한 번 더 가보면 좋아요. 부동산에는 <q>이 동네에서 피하는 골목 있어요?</q>라고 물어보세요.',
+   o:[['기피시설','바로 옆에 기피시설이 있어요.'],['어둡고 경사','밤길이 어둡거나 급경사예요.'],['보통','무난해요.'],['조용·깔끔','조용하고 깔끔해요.'],['살고 싶음','내가 살아도 좋겠어요.']]}
+ ]},
+ {id:'bld',name:'건물',note:'건물 밖과 공용 공간에서 보는 것들이에요.',items:[
+  {id:'age',q:'건물 연식',how:'건물 입구 머릿돌이나 외관을 보고 대략 판단해요. 부동산에 물어봐도 금방 알려줘요.',
+   o:[['30년↑','30년이 넘었어요.'],['21~30년','21~30년 됐어요.'],['11~20년','11~20년 됐어요.'],['6~10년','6~10년 됐어요.'],['5년 내','신축급이에요.']]},
+  {id:'elev',q:'엘리베이터',how:'엘리베이터가 없으면 층이 높을수록 불리해요. 해당 호수 층수와 같이 보세요.',
+   o:[['없음·4층↑','엘리베이터 없이 4층 이상이에요.'],['없음·3층','엘리베이터 없이 3층이에요.'],['없음·1~2층','엘리베이터는 없지만 낮은 층이에요.'],['있음·낡음','있지만 낡았어요.'],['있음','엘리베이터가 있고 상태가 좋아요.']]},
+  {id:'park',q:'주차',how:'주차 칸 수와 세대 수(우편함 개수)를 비교하고, 저녁 주차 상황을 봐요.',
+   o:[['불가','주차가 안 돼요.'],['골목 주차','골목에 세워야 해요.'],['빠듯','자리가 빠듯해요.'],['대부분 가능','대부분 세울 수 있어요.'],['세대당 1대↑','세대당 1대 이상 돼요.']]},
+  {id:'common',q:'공용부 관리 상태',how:'계단·복도 청소, 우편함, 분리수거장, 현관문 상태를 봐요. 관리가 잘 된 건물은 집 안도 깨끗할 확률이 높아요.',
+   o:[['방치','관리가 안 돼요.'],['지저분','지저분한 편이에요.'],['보통','평범해요.'],['깔끔','깔끔해요.'],['아주 깔끔','관리가 아주 잘 돼요.']]}
+ ]},
+ {id:'unit',name:'집',note:'해당 호수를 봐요. 안을 못 보면 같은 라인 다른 집이나 부동산 설명으로 판단해요.',items:[
+  {id:'rooms',q:'방 개수·구조',how:'방 3개·화장실 2개가 가장 잘 팔려요. 거실이 없거나 방이 너무 작은 이상한 구조면 낮게 주세요. 부동산에 <q>방 3개랑 2개 중에 뭐가 잘 나가요?</q>라고 물어보세요.',
+   o:[['원룸','원룸형이에요.'],['투룸·구조X','투룸인데 구조가 별로예요.'],['투룸','평범한 투룸이에요.'],['쓰리룸','방이 3개예요.'],['쓰리룸·화2','방 3개에 화장실 2개예요.']]},
+  {id:'floor',q:'층·채광',how:'몇 층인지, 해가 잘 드는지 봐요. 반지하는 침수·곰팡이 위험이 커요.',
+   o:[['반지하','반지하예요.'],['1층·어둠','1층이거나 많이 어두워요.'],['보통','평범해요.'],['밝은 편','해가 잘 드는 편이에요.'],['중층·남향','중간층에 남향이라 밝아요.']]},
+  {id:'leak',q:'누수·균열',how:'외벽 금, 계단·복도 천장 물 얼룩, 창틀 주변 곰팡이를 봐요. 관리인에게 <q>비 오면 물 샌 적 있어요?</q>라고 물어보세요.',
+   o:[['심각','누수·균열이 심해요.'],['여러 곳','흔적이 여러 곳 있어요.'],['조금','작은 흔적이 있어요.'],['거의 없음','거의 안 보여요.'],['깨끗','흔적이 전혀 없어요.']]}
+ ]},
+ {id:'move',name:'명도·체납',note:'낙찰 후 집을 넘겨받기가 얼마나 수월할지 현장에서 가늠해요.',items:[
+  {id:'occ',q:'점유자 상황',how:'매각물건명세서에 나온 점유자가 실제로 사는지 현장에서 확인해요. 우편물, 전기·가스 계량기를 보고 관리인이나 이웃에게 <q>그 호수 지금 누가 살아요?</q>라고 물어보세요.',
+   o:[['확인 불가','누가 사는지 확인이 안 되거나 다툼이 예상돼요.'],['배당불가 임차인','배당을 못 받는 임차인이 살아요.'],['배당O 임차인','배당받는 임차인이라 협조적일 가능성이 커요.'],['소유자 거주','소유자가 살고 대화가 돼요.'],['공실','비어 있어요.']]},
+  {id:'dues',q:'관리비 체납',how:'관리인이나 이웃에게 <q>관리비 밀린 집 있어요?</q>라고 물어보고, 게시판에 붙은 체납 안내문도 봐요.',
+   o:[['1년↑','1년 넘게 밀렸거나 확인이 안 돼요.'],['6~12개월','6~12개월 밀렸어요.'],['3~6개월','3~6개월 밀렸어요.'],['3개월 미만','조금 밀렸어요.'],['없음','밀린 관리비가 없어요.']]}
+ ]}
+];
+const REDS=[
+ {id:'viol',t:'위반건축물로 보이는 곳이 있어요',d:'베란다 확장, 옥상·옥탑 증축, 필로티 주차장을 막아서 만든 공간 등'},
+ {id:'flood',t:'침수 흔적이 있거나 누수가 심해요',d:'벽 아래쪽 물자국, 곰팡이, 배수구 주변 흔적'},
+ {id:'under',t:'반지하이거나 1층 필로티 바로 위 세대예요'},
+ {id:'noview',t:'집 안을 못 봤어요',d:'방 개수·구조·누수는 추정으로 매겼어요'}
+];
+const ITEMS=CATS.flatMap(c=>c.items.map(i=>({...i,cat:c.id})));
+const KEY='villa-imjang-v2';
+const FIELDS=['name','addr','date','bid','memo','c0','c1','c2','jeonse'];
+const blank=()=>({scores:{},reds:{},name:'',addr:'',date:today(),bid:'',memo:'',c0:'',c1:'',c2:'',jeonse:''});
+let st;
+const $=id=>document.getElementById(id);
+
+function today(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function load(){st=blank();try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s&&s.scores)st=Object.assign(st,s)}catch(e){} if(!st.date)st.date=today()}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+
+/* 금액: "2억 1천", "2억1500", "21000"(만원), "8천" → 만원 단위 숫자 */
+function parseMan(s){
+  if(!s)return null;s=String(s).replace(/[,\s원]/g,'');
+  let m=s.match(/^(\d+(?:\.\d+)?)억(?:(\d+(?:\.\d+)?)(천)?만?)?$/);
+  if(m){let v=parseFloat(m[1])*10000;if(m[2]){let r=parseFloat(m[2]);if(m[3])r*=1000;v+=r}return v}
+  m=s.match(/^(\d+(?:\.\d+)?)(천)?만?$/);
+  if(m){let v=parseFloat(m[1]);if(m[2])v*=1000;return v}
+  return null;
+}
+function fmtMan(v){v=Math.round(v);const e=Math.floor(v/10000),r=v%10000;return (e?e+'억':'')+(r?(e?' ':'')+r.toLocaleString('ko-KR')+'만':'')||'0'}
+function priceInfo(){
+  const raw=['c0','c1','c2'].map(k=>st[k]).filter(Boolean),vals=raw.map(parseMan);
+  const ok=vals.filter(v=>v!=null&&v>0),bad=vals.some(v=>v==null)||(st.jeonse&&parseMan(st.jeonse)==null);
+  const avg=ok.length?ok.reduce((a,b)=>a+b,0)/ok.length:null;
+  const j=parseMan(st.jeonse);
+  const ratio=avg&&j?Math.round(j/avg*100):null;
+  return {avg,n:ok.length,j,ratio,bad};
+}
+
+function build(){
+  const box=$('cats');
+  CATS.forEach(c=>{
+    const sec=document.createElement('section');sec.className='card';
+    sec.innerHTML=`<div class="card-h"><span class="card-t">${c.name}</span><span class="pct" id="cp-${c.id}"></span></div><p class="card-note">${c.note}</p>`;
+    c.items.forEach(it=>{
+      const d=document.createElement('div');d.className='item';
+      d.innerHTML=`<div class="q">${it.q}${it.star?'<span class="tag">★중요 ×2</span>':''}</div>
+        <div class="opts" role="group" aria-label="${it.q} 점수">${it.o.map((o,k)=>`<button type="button" class="opt" id="o-${it.id}-${k+1}" data-i="${it.id}" data-s="${k+1}" aria-pressed="false"><span class="n">${k+1}</span><span class="s">${o[0]}</span></button>`).join('')}</div>
+        <div class="picked" id="p-${it.id}">아직 선택 안 했어요</div>`;
+      sec.appendChild(d);
+    });
+    box.appendChild(sec);
+  });
+  $('reds').innerHTML=REDS.map(r=>`<label class="chk" id="rc-${r.id}"><input type="checkbox" id="r-${r.id}" data-r="${r.id}"><span>${r.t}${r.d?`<small>${r.d}</small>`:''}</span></label>`).join('');
+  box.addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b)return;const i=b.dataset.i,s=+b.dataset.s;
+    if(st.scores[i]===s)delete st.scores[i];else st.scores[i]=s;persist();render()});
+  $('reds').addEventListener('change',e=>{const r=e.target.dataset.r;if(!r)return;st.reds[r]=e.target.checked;persist();render()});
+  FIELDS.forEach(k=>$(k).addEventListener('input',e=>{st[k]=e.target.value;persist();if(/^c\d|jeonse/.test(k))renderPrice()}));
+  $('calc').addEventListener('click',e=>{if(e.target.id!=='useAvg')return;const p=priceInfo();if(!p.avg)return;st.bid=fmtMan(p.avg);$('bid').value=st.bid;persist();toast('예상 매도가에 평균을 넣었어요')});
+}
+
+const GC={good:'#2F8A57',navy:'#223256',orange:'#E8742C',bad:'#D4433A',muted:'#767066'};
+function calc(){
+  let got=0,max=0,n=0;const cat={};
+  ITEMS.forEach(it=>{const w=it.star?2:1,s=st.scores[it.id];cat[it.cat]=cat[it.cat]||{g:0,m:0};
+    if(s){got+=s*w;max+=5*w;n++;cat[it.cat].g+=s*w;cat[it.cat].m+=5*w}});
+  const score=max?Math.round(got/max*100):0;
+  const red=REDS.filter(r=>st.reds[r.id]);
+  let g;
+  if(!n)g={k:'-',l:'체크 전',hex:GC.muted,m:'항목을 체크하면 이 물건이 몇 점짜리인지 바로 보여드려요.'};
+  else if(score>=80)g={k:'A',l:'적극 검토',hex:GC.good,m:'거래도 잘 되고 조건이 좋은 물건이에요. 입찰가를 꼼꼼히 정해보세요.'};
+  else if(score>=65)g={k:'B',l:'조건부 검토',hex:GC.navy,m:'괜찮은 물건이에요. 아쉬운 항목을 입찰가로 메울 수 있는지 따져보세요.'};
+  else if(score>=50)g={k:'C',l:'신중하게',hex:GC.orange,m:'약점이 꽤 있어요. 입찰가를 더 낮추거나 다른 물건과 비교해보세요.'};
+  else g={k:'D',l:'패스 추천',hex:GC.bad,m:'이번 물건은 넘기고 다음 물건을 보는 게 좋아요.'};
+  const warn=st.scores.deal===1?'주의: 최근 6개월 실거래가 30건도 안 돼요. 낙찰받아도 되팔기 어려울 수 있어요.':'';
+  const weak=ITEMS.filter(it=>st.scores[it.id]&&st.scores[it.id]<=2);
+  return {score,n,cat,g,red,warn,weak};
+}
+
+function renderPrice(){
+  const p=priceInfo();let h='';
+  if(p.avg)h+=`<span>실거래 평균 <b>${fmtMan(p.avg)}</b> (${p.n}건)</span><button type="button" class="mini" id="useAvg">예상 매도가로 쓰기</button>`;
+  if(p.ratio!=null)h+=`<span>전세가율 <b>${p.ratio}%</b></span>`;
+  if(!h)h='<span>실거래가를 넣으면 평균을 계산해 드려요.</span>';
+  if(p.bad)h+='<span class="err">금액은 "2억 1천"처럼 써주세요.</span>';
+  $('calc').innerHTML=h;
+}
+
+function render(){
+  ITEMS.forEach(it=>{const s=st.scores[it.id];
+    for(let k=1;k<=5;k++)$(`o-${it.id}-${k}`).setAttribute('aria-pressed',s===k?'true':'false');
+    $(`p-${it.id}`).innerHTML=s?`<b>${s}점</b> · ${it.o[s-1][1]}`:'아직 선택 안 했어요'});
+  REDS.forEach(r=>{$(`r-${r.id}`).checked=!!st.reds[r.id];$(`rc-${r.id}`).classList.toggle('on',!!st.reds[r.id])});
+  FIELDS.forEach(k=>{if($(k).value!==(st[k]||''))$(k).value=st[k]||''});
+  renderPrice();
+  const r=calc(),T=ITEMS.length;
+  CATS.forEach(c=>{const x=r.cat[c.id],cnt=c.items.filter(i=>st.scores[i.id]).length;
+    $(`cp-${c.id}`).textContent=cnt?`${cnt}/${c.items.length} · ${Math.round(x.g/x.m*100)}점`:`0/${c.items.length}`});
+  $('rScore').textContent=r.score;$('rChip').textContent=r.g.k;$('rChip').style.background=r.g.hex;$('rLbl').textContent=r.g.l;$('rLbl').style.color=r.g.hex;
+  $('rMsg').textContent=r.g.m;$('rProg').textContent=`${r.n} / ${T} 항목 체크`;
+  $('rWarn').hidden=!r.warn;$('rWarn').textContent=r.warn;
+  $('rBars').innerHTML=CATS.map(c=>{const x=r.cat[c.id],p=x&&x.m?Math.round(x.g/x.m*100):null;
+    return `<div class="bar"><span>${c.name}</span><span class="t"><i style="width:${p||0}%"></i></span><span class="v">${p==null?'-':p}</span></div>`}).join('');
+  $('rWeak').hidden=!r.weak.length&&!r.red.length;
+  $('rWeak').innerHTML=(r.weak.length?`<b>아쉬운 항목 (2점 이하)</b><ul>${r.weak.map(it=>`<li>${it.q} · ${st.scores[it.id]}점 (${it.o[st.scores[it.id]-1][0]})</li>`).join('')}</ul>`:'')
+    +(r.red.length?`<b>특이사항</b><ul>${r.red.map(x=>`<li>${x.t}</li>`).join('')}</ul>`:'');
+  $('dScore').textContent=r.score;$('dLbl').textContent=r.n?`${r.g.k}등급 · ${r.g.l}`:'체크 전';
+  $('dProg').textContent=`${r.n} / ${T} 항목`;$('dBar').style.width=(r.n/T*100)+'%';
+}
+
+/* ---------- 결과 이미지 (캔버스로 직접 그림) ---------- */
+function wrapLines(ctx,text,w){const out=[];(text||'').split('\n').forEach(par=>{let line='';for(const ch of par){const t=line+ch;if(ctx.measureText(t).width>w&&line){out.push(line);line=ch}else line=t}out.push(line)});return out}
+function rr(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+const logoImg=new Image();logoImg.src=LOGO;
+async function drawCard(){
+  try{await Promise.all([document.fonts.load('800 60px "Noto Sans KR"'),document.fonts.load('700 30px "Noto Sans KR"'),document.fonts.load('400 30px "Noto Sans KR"')])}catch(e){}
+  try{if(!logoImg.complete)await new Promise(res=>{logoImg.onload=logoImg.onerror=res})}catch(e){}
+  const r=calc(),p=priceInfo(),W=1080,P=64,IW=W-P*2,B='"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif';
+  const C={bg:'#F7F4EE',card:'#FFFFFF',ink:'#20242C',mu:'#767066',line:'#E4E0D6',navy:'#16233F',navy2:'#223256',nt:'#C7CEDE',or:'#E8742C',orS:'#FBE4D3',track:'#F1EDE5',bad:'#D4433A',gold:'#F5C66B'};
+  const m=document.createElement('canvas').getContext('2d');
+  m.font=`400 30px ${B}`;const memoLines=st.memo?wrapLines(m,st.memo,IW-56):[];
+  const redOn=REDS.filter(x=>st.reds[x.id]);
+  m.font=`800 48px ${B}`;const nmLines=wrapLines(m,st.name||'이름 없는 물건',IW-56).slice(0,2);
+  const priceBits=[];if(st.bid)priceBits.push('예상 매도가 '+st.bid);if(p.avg)priceBits.push(`실거래 평균 ${fmtMan(p.avg)}`);if(p.j)priceBits.push(`전세 ${fmtMan(p.j)}${p.ratio!=null?` (전세가율 ${p.ratio}%)`:''}`);
+  m.font=`700 26px ${B}`;const priceLines=[];let cur='';priceBits.forEach(b=>{const t=cur?cur+'   ·   '+b:b;if(cur&&m.measureText(t).width>IW-56){priceLines.push(cur);cur=b}else cur=t});if(cur)priceLines.push(cur);
+  const headH=56+30+40+nmLines.length*58+(st.addr?42:0)+40+priceLines.length*38+36;
+  const H=40+headH+30+260+30+CATS.length*50+30+60+ITEMS.length*60+20+(redOn.length?70+redOn.length*42:0)+(memoLines.length?76+memoLines.length*44:0)+40+96;
+  const cv=document.createElement('canvas');cv.width=W;cv.height=H;const x=cv.getContext('2d');x.textBaseline='alphabetic';
+  x.fillStyle=C.bg;x.fillRect(0,0,W,H);
+  // 네이비 헤더
+  let y=40;x.fillStyle=C.navy;rr(x,P,y,IW,headH,28);x.fill();
+  x.save();rr(x,P,y,IW,headH,28);x.clip();const gr=x.createRadialGradient(P+IW-40,y-20,0,P+IW-40,y-20,300);gr.addColorStop(0,'rgba(232,116,44,.42)');gr.addColorStop(1,'rgba(232,116,44,0)');x.fillStyle=gr;x.fillRect(P,y,IW,headH);x.restore();
+  let hy=y+56+14;x.fillStyle=C.gold;x.font=`800 26px ${B}`;x.fillText('빌라 임장 점수표',P+28,hy);
+  hy+=40;x.fillStyle='#FFFFFF';x.font=`800 48px ${B}`;nmLines.forEach(l=>{hy+=58;x.fillText(l,P+28,hy-14)});
+  if(st.addr){hy+=42;x.fillStyle=C.nt;x.font=`500 27px ${B}`;x.fillText(wrapLines(x,st.addr,IW-56)[0],P+28,hy-14)}
+  hy+=40;x.fillStyle=C.nt;x.font=`500 25px ${B}`;x.fillText(`임장일 ${st.date||'-'}   ·   ${r.n}/${ITEMS.length} 항목 체크`,P+28,hy-14);
+  x.fillStyle='#FFFFFF';x.font=`700 26px ${B}`;priceLines.forEach(l=>{hy+=38;x.fillText(l,P+28,hy-12)});
+  y+=headH+30;
+  // 점수 카드
+  x.fillStyle=C.card;rr(x,P,y,IW,260,28);x.fill();x.strokeStyle=C.line;x.lineWidth=2;x.stroke();
+  x.fillStyle=C.mu;x.font=`800 26px ${B}`;x.fillText('최종 점수',P+40,y+58);
+  x.fillStyle=C.or;x.font=`800 170px ${B}`;x.fillText(String(r.score),P+34,y+220);
+  const sw=x.measureText(String(r.score)).width;x.fillStyle=C.mu;x.font=`800 34px ${B}`;x.fillText('/ 100점',P+48+sw,y+214);
+  const chipW=124;x.fillStyle=r.g.hex;rr(x,P+IW-40-chipW,y+52,chipW,108,22);x.fill();
+  x.fillStyle='#fff';x.font=`800 66px ${B}`;x.textAlign='center';x.fillText(r.g.k,P+IW-40-chipW/2,y+130);
+  x.fillStyle=r.g.hex;x.font=`800 32px ${B}`;x.textAlign='right';x.fillText(r.g.l,P+IW-40,y+212);x.textAlign='left';
+  y+=260+30;
+  // 카테고리 막대
+  CATS.forEach(c=>{const v=r.cat[c.id],pc=v&&v.m?Math.round(v.g/v.m*100):null;
+    x.fillStyle=C.ink;x.font=`800 27px ${B}`;x.fillText(c.name,P+8,y+28);
+    const bx=P+200,bw=IW-200-96;x.fillStyle=C.track;rr(x,bx,y+9,bw,22,11);x.fill();
+    if(pc){x.fillStyle=C.navy;rr(x,bx,y+9,Math.max(22,bw*pc/100),22,11);x.fill()}
+    x.fillStyle=C.mu;x.font=`800 27px ${B}`;x.textAlign='right';x.fillText(pc==null?'-':pc+'점',P+IW-8,y+30);x.textAlign='left';y+=50});
+  y+=30;
+  // 항목별
+  x.fillStyle=C.or;rr(x,P+8,y+6,7,26,3);x.fill();x.fillStyle=C.ink;x.font=`800 29px ${B}`;x.fillText('항목별 점수',P+28,y+30);y+=60;
+  ITEMS.forEach(it=>{const s=st.scores[it.id];
+    x.strokeStyle=C.line;x.lineWidth=2;x.beginPath();x.moveTo(P+8,y);x.lineTo(P+IW-8,y);x.stroke();
+    x.fillStyle=C.ink;x.font=`600 27px ${B}`;x.fillText(it.q.replace(' (최근 6개월)','')+(it.star?' ★':''),P+8,y+40);
+    for(let k=0;k<5;k++){x.beginPath();x.arc(P+IW-400+k*34,y+31,11,0,Math.PI*2);x.fillStyle=s&&k<s?(s<=2?C.bad:C.navy):'#E4E0D6';x.fill()}
+    x.fillStyle=s?(s<=2?C.bad:C.ink):C.mu;x.font=`800 25px ${B}`;x.textAlign='right';x.fillText(s?it.o[s-1][0]:'미체크',P+IW-8,y+40);x.textAlign='left';
+    y+=60});
+  y+=20;
+  if(redOn.length){x.fillStyle=C.or;rr(x,P+8,y+14,7,26,3);x.fill();x.fillStyle=C.ink;x.font=`800 29px ${B}`;x.fillText('특이사항',P+28,y+38);y+=70;
+    x.fillStyle=C.ink;x.font=`600 27px ${B}`;redOn.forEach(rd=>{x.fillText('· '+rd.t,P+8,y+10);y+=42})}
+  if(memoLines.length){x.fillStyle=C.or;rr(x,P+8,y+14,7,26,3);x.fill();x.fillStyle=C.ink;x.font=`800 29px ${B}`;x.fillText('기타',P+28,y+38);y+=76;
+    x.fillStyle=C.mu;x.font=`400 29px ${B}`;memoLines.forEach(l=>{x.fillText(l,P+8,y);y+=44})}
+  // 네이비 푸터
+  const fy=H-96;x.fillStyle=C.navy;x.fillRect(0,fy,W,96);
+  x.fillStyle=C.nt;x.font=`700 24px ${B}`;x.fillText('빌라 임장 점수표',P,fy+57);
+  x.font=`800 28px ${B}`;const mw=x.measureText('made by 가치경매').width;x.fillStyle='#F2F5FA';x.textAlign='right';x.fillText('made by 가치경매',W-P,fy+58);x.textAlign='left';
+  try{if(logoImg.naturalWidth){const lh=34,lw=lh*logoImg.naturalWidth/logoImg.naturalHeight;x.drawImage(logoImg,W-P-mw-14-lw,fy+(96-lh)/2,lw,lh)}}catch(e){}
+  return cv;
+}
+
+let lastBlob=null,downloads=null;
+(async()=>{try{downloads=window.claude?await window.claude.use('downloads'):null}catch(e){downloads=null}})();
+function toast(t){const el=$('toast');el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2600)}
+$('saveImg').addEventListener('click',async()=>{
+  if(!calc().n){toast('먼저 항목을 하나 이상 체크해 주세요');return}
+  const cv=await drawCard();$('preview').src=cv.toDataURL('image/png');
+  lastBlob=await new Promise(res=>cv.toBlob(res,'image/png'));
+  const can=downloads||!window.claude;$('doSave').hidden=!can;$('saveHint').textContent=can?'저장 버튼이 안 되면 이미지를 길게 눌러 저장하세요.':'이미지를 길게 누르거나 우클릭해서 저장하세요.';
+  $('modal').hidden=false;
+});
+$('doSave').addEventListener('click',async()=>{
+  if(!lastBlob)return;
+  const nm=(st.name||'물건').replace(/[\\/:*?"<>|]/g,'').slice(0,40).trim()||'물건';
+  const fname=`가치경매_임장점수_${nm}_${st.date||today()}.png`;
+  if(!downloads){
+    try{const file=new File([lastBlob],fname,{type:'image/png'});
+      if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:'빌라 임장 점수'});$('modal').hidden=true;return}}catch(e){if(e&&e.name==='AbortError')return}
+    const a=document.createElement('a');a.href=URL.createObjectURL(lastBlob);a.download=fname;a.style.display='none';document.body.appendChild(a);a.click();
+    setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500);toast('사진을 저장했어요');$('modal').hidden=true;return}
+  try{await downloads.save({filename:fname,data:lastBlob});toast('사진을 저장했어요');$('modal').hidden=true}
+  catch(e){if(e&&e.code==='declined')toast('저장을 취소했어요');else if(e&&e.code==='rate_limited')toast('잠시 후 다시 눌러주세요');else{toast('여기서는 바로 저장이 안 돼요. 이미지를 길게 눌러 저장하세요');$('doSave').hidden=true}}
+});
+$('closeModal').addEventListener('click',()=>$('modal').hidden=true);
+$('modal').addEventListener('click',e=>{if(e.target.id==='modal')$('modal').hidden=true});
+$('goResult').addEventListener('click',()=>$('result').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+
+let armed=0;
+$('reset').addEventListener('click',()=>{
+  if(Date.now()-armed>3000){armed=Date.now();$('reset').textContent='한 번 더 누르면 지워져요';setTimeout(()=>{$('reset').textContent='새 물건 시작'},3000);return}
+  armed=0;st=blank();persist();render();$('reset').textContent='새 물건 시작';window.scrollTo(0,0);toast('새 물건을 시작해요');
+});
+$('sample').addEventListener('click',()=>{
+  st=Object.assign(blank(),{scores:{deal:4,rent:4,station:5,life:4,area:3,age:3,elev:3,park:2,common:3,rooms:4,floor:4,leak:4,occ:3,dues:5},reds:{viol:true},
+    name:'(예시) 2026타경0000 · 망원동 OO빌라 302호',addr:'서울 마포구 망원동 (예시 주소)',bid:'2억 2천',c0:'2억 1천',c1:'2억 3천',c2:'2억 1500',jeonse:'1억 7천',
+    memo:'역까지 평지 8분. 저녁에 골목 주차 빡빡함. 옥상에 창고 같은 구조물 있음.'});
+  persist();render();toast('예시를 채웠어요. "새 물건 시작"으로 지울 수 있어요');
+});
+
+document.querySelectorAll('img.logo').forEach(i=>i.src=LOGO);
+load();build();render();
+</script>
+
+</body>
+</html>
